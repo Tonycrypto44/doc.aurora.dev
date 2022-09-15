@@ -14,7 +14,7 @@ Ethereum.
 
 ## Gas
 
-See [notes on gas](gas.md).
+See [notes on gas](docs/evm/gas.md).
 
 ## Precompiles
 
