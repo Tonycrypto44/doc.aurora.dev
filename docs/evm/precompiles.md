@@ -41,9 +41,10 @@ function.
 
 ## ECRecover
 
+**Spec**: Ethereum [yellow paper], appendix F
+
 More information about ECDSA can be
-found [here](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) or in
-Ethereum [yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf), appendix F.
+found [here](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm).
 
 ### Inputs
 
@@ -65,6 +66,10 @@ note, that the return is the address that issued the signature but it won't veri
 
 ## SHA2-256
 
+**Spec**: Ethereum [yellow paper], appendix E. Precompiled Contracts
+
+More information about SHA2 can be found [here](https://en.wikipedia.org/wiki/SHA-2).
+
 ### Inputs
 
 |    Byte range | Name |                Description |
@@ -81,6 +86,10 @@ If not enough gas was given, then there is no return data.
 
 ## RIPEMD-160
 
+**Spec**: Ethereum [yellow paper], appendix E. Precompiled Contracts
+
+More information can be found [here](https://en.wikipedia.org/wiki/RIPEMD).
+
 ### Inputs
 
 |    Byte range | Name |                  Description |
@@ -96,6 +105,8 @@ If not enough gas was given, then there is no return data.
 If not enough gas was given, then there is no return data.
 
 ## Identity
+
+**Spec**: Ethereum [yellow paper], appendix E. Precompiled Contracts
 
 The identity function is typically used to copy a chunk of memory.
 
@@ -114,6 +125,8 @@ The identity function is typically used to copy a chunk of memory.
 If not enough gas was given, then there is no return data.
 
 ## ModExp
+
+**Spec**: Ethereum [yellow paper], appendix E. Precompiled Contracts
 
 Arbitrary-precision exponentiation under modulo.
 
@@ -138,6 +151,8 @@ If not enough gas was given, then there is no return data.
 
 # BN256 Add
 
+**Spec**: Ethereum [yellow paper], appendix E.1 zkSNARK Related Precompiled Contract
+
 The point at infinity is encoded with both field `x` and `y` at `0`.
 
 ## Inputs
@@ -160,6 +175,8 @@ If the input is not valid, or if not enough gas was given, then there is no retu
 
 ## BN256 Multiply
 
+**Spec**: Ethereum [yellow paper], appendix E.1 zkSNARK Related Precompiled Contract
+
 The point at infinity is encoded with both field `x` and `y` at `0`.
 
 ### Inputs
@@ -180,6 +197,8 @@ The point at infinity is encoded with both field `x` and `y` at `0`.
 If the input is not valid, or if not enough gas was given, then there is no return data.
 
 ## BN256 Pairing
+
+**Spec**: Ethereum [yellow paper], appendix E.1 zkSNARK Related Precompiled Contract
 
 The point at infinity is encoded with both field `x` and `y` at `0`.
 
@@ -207,6 +226,8 @@ If the input is not valid, or if not enough gas was given, then there is no retu
 
 ## Blake2 F
 
+**Spec**: Ethereum [yellow paper], appendix E.2. BLAKE2 Precompiled Contract
+
 The Blake2 F compression algorithm is defined in this [RFC], section 3.2.
 
 [RFC]: https://www.rfc-editor.org/rfc/rfc7693#section-3.2
@@ -231,6 +252,8 @@ If the input is not valid, or if not enough gas was given, then there is no retu
 
 ## Predecessor Account ID
 
+**Spec**: Pending AIP
+
 Returns the NEAR predecessor account submitting the transaction.
 
 ### Inputs
@@ -244,6 +267,8 @@ No input required.
 | `[0; length]` (32 bytes) | account id | NEAR predecessor account ID |
 
 ## Get Promise Results
+
+**Spec**: Pending AIP
 
 Returns the promise results as bytes from executing a NEAR promise.
 
@@ -259,6 +284,8 @@ No input required.
 
 ## Prepaid Gas
 
+**Spec**: Pending AIP
+
 Returns the prepaid gas denoted in NEAR as part of the underlying NEAR transaction.
 
 ### Inputs
@@ -272,6 +299,8 @@ No input required.
 | `[0; 31]`  | gas  | The prepaid gas value |
 
 ## Exit to Near
+
+**Spec**: Pending AIP
 
 Transfers either ETH or a NEP-141 mapped ERC-20 token from the Aurora EVM to Near as NEP-141.
 
@@ -309,6 +338,8 @@ There is no output except for log emissions which will trigger the transfer of N
 
 ## Exit to Ethereum
 
+**Spec**: Pending AIP
+
 Transfers either ETH or a NEP-141 mapped ERC-20 token from the Aurora EVM to Ethereum over
 the [Rainbow Bridge](../bridge/bridge-overview.md).
 
@@ -344,3 +375,5 @@ mapped ERC-20 contract.
 
 There is no output except for log emissions which will trigger the transfer from Aurora EVM to the
 Ethereum blockchain. 
+
+[yellow paper]: https://ethereum.github.io/yellowpaper/paper.pdf
